@@ -1,11 +1,10 @@
 ## MLH MockUp
 
+## [LIVE DEMO!!!](https://profile-mockup-mlh.herokuapp.com/index.html)
+
+
 In the project directory, you will find:
 
-assets
-
-
-## [LIVE DEMO!!!](https://profile-mockup-mlh.herokuapp.com/index.html)
 
 Assets Folder<br>
 Images Folder<br>
