@@ -1,0 +1,250 @@
+/*------------------------------//
+/             BODY              //
+/-------------------------------*/
+
+
+body{
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.gradient{
+    background: -webkit-repeating-linear-gradient(#C34E52, #C34E52 49.9%, #F9F9F9 50.1%, #F9F9F9 100%);
+	background: -o-repeating-linear-gradient(#C34E52, #C34E52 49.9%, #F9F9F9 50.1%, #F9F9F9 100%);
+	background: -moz-repeating-linear-gradient(#C34E52, #C34E52 49.9%, #F9F9F9 50.1%, #F9F9F9 100%);
+	background: repeating-linear-gradient(#C34E52, #C34E52 49.9%, #F9F9F9 50.1%, #F9F9F9 100%); 
+	background: repeating-linear-gradient(#C34E52, #C34E52 28%, #F9F9F9 28%, #F9F9F9 100%);
+}
+
+.background {
+    text-align:center;
+    font: 14px "Open Sans", Verdana, sans-serif;
+	color: white;
+	width: 100%;
+	height: 100vh;
+}
+
+
+
+
+
+/*------------------------------//
+/            HEADER             //
+/-------------------------------*/
+
+
+.header {
+	display: flex;
+	/* width: 80%; */
+	margin: 0 auto;
+
+	/* COMMENT -- Set fixed width as default. We'll change this in the media queries. */
+	width: 1050px;
+	padding: 1.6rem 0;
+	align-items: center;
+	/* background-color: salmon; */
+	justify-content: space-between;
+}
+
+/* COMMENT -- Flex the div holding briefcase and greeting */ 
+.logo-container {
+	display: flex;
+	align-items: center;
+}
+
+/* COMMENT -- Add styles for briefcase */ 
+img.logo {
+	width: auto;
+	height: 24px;
+}
+
+#Iam{
+	position: relative;
+	margin: 0;
+	padding: 0 1.2rem;
+}
+
+.main-nav {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-nav li {
+	margin: 0 1.4rem;
+}
+
+/* COMMENT -- Make sure the last item on the menu has a right margin of 0 */
+.main-nav li:last-child {
+	margin-right: 0;
+}
+
+.main-nav a {
+	text-align: center;
+	display: block;
+	color: white;
+	font-size: 1em;
+}
+
+  
+
+
+
+/*------------------------------//
+/             PROFILE           //
+/-------------------------------*/
+
+
+.profileSection {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	width: 1050px;
+    padding: 1.6rem 0;
+	
+}
+
+.profileInfo {
+	display: flex;
+ /* COMMENT -- Image set to 100% as to not stretch the image out */
+	height: 100%;
+}
+
+#profileBio {
+    border-radius: 6px;
+    background: white;
+    text-align: left;
+    color: black; 
+	font-family: 'Helvetica', 'Arial', sans-serif;
+
+	/* COMMENT -- Set width as a percentage for easier responsiveness */
+	width: 64%;
+	padding: 1.6rem;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#profileBio h1 {
+	color: #c34e52;
+	margin: 0;
+	margin-bottom: 1.2rem;
+}
+
+.info {
+	font-size: 1.2em;
+	line-height: 1.6;
+	margin: 0;
+    padding: 1.2rem 0;
+}
+
+.skills {
+	display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+    background-color: white;
+    margin: 0;
+	list-style: none;
+	padding: 1.2rem 0;
+ }
+
+.skills li {
+	text-align: center;
+	display: block;
+    border-radius: 25px;
+    color: black;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.6rem .8rem;
+	margin: 0 0.6rem;
+}
+
+.skills li:first-child {
+	margin-left: 0;
+}
+
+
+
+.skills li:hover {
+	background-color:#C34E52;
+	color: white;
+}
+
+
+
+
+
+/*------------------------------//
+/         SOCIAL LINKS         //
+/-------------------------------*/
+
+
+a {
+  color: #ddd;
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  padding:0 6px;
+  transition: color .3s cubic-bezier(0.11, 0.7, 0, 1);
+  letter-spacing: .15rem;
+  line-height: 1.8;
+}
+
+
+[title="Twitter"]:hover{
+  color: rgb(85,172,238);
+}
+
+[title="GitHub"]:hover{
+  color: rgb(114,49,132);
+}
+
+[title="Portfolio"]:hover{
+  color: rgb(255,255,0);
+}
+
+
+.links:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #CF2034;
+  content: "";
+  border-bottom: 1px solid #222;
+  transform: translate3d(-101%,0,0);
+  transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+.links:hover:after {
+  transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+/*------------------------------//
+/         MEDIA QUERIES         //
+/-------------------------------*/
+
+
+@media screen and (max-width: 1150px) {
+	.header {
+		width: 80%;
+	}
+	.profileSection {
+		width: 80%;
+	}
+	#profileBio {
+		width: initial;
+		margin-left: 1.6rem;
+	}
+}
+
